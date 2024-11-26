@@ -1,0 +1,297 @@
+/*
+  portfolio.css v1.4
+  This css is used in all the portfolio pages to provide consistent design, it overrides the styles in the bootstrap css 
+*/
+
+/* set up commonly used variables to make css more adaptable 
+these variables can be used in this css by using var(variablename)
+this makes it easier to manage if this ever needs to be changed because I can change it in one place */
+:root {
+  --primary-background-colour: #ffffff;
+  --secondary-bg-colour: #0d2afd;
+  --footer-bg-colour: #f8f9fa;
+  --link-button-border:  #c9cccd;
+  --link-button-background: #3d3f56; 
+}
+
+/* use the google font family loaded by API in the html for all text, and set the defauts for fonts and backgrounds and layout */
+body {
+  font-family: "Questrial", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--primary-background-colour);
+  color: #000000;
+  margin: 0px;
+  /* set the default padding */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.contactme {
+  background-color: var(--footer-bg-colour);
+}
+
+/* element background colour - used in headings - used a global variable here as this colour used elsewhere*/
+.bg-colour {
+  background-color: var(--secondary-bg-colour);
+}
+
+/* For the about me, and the testimonials headshot make the image circular with a border
+use the same outline colour as used for the buttons */ 
+img.headshot {
+  /* radius 50% is circular */
+  border-radius: 50%;
+  border-style: dashed;
+  border: 0.1rem solid var(--link-button-border);
+  width: auto;
+  height: auto;
+}
+
+/*  for the testimonials the headshots are smaller so this class cam be added in the html additionally
+so it keeps all the headshot css but it will take the width settings from here */ 
+img.testimonial {
+  max-width: 100%;
+  width: 3rem;
+}
+
+/* align all icons to the bottom for consistency */
+img.icon {
+  vertical-align: bottom;
+}
+
+/* create an arrow pointing up behind the cards to indicate a timeline - used in cv.html 
+bacause the .css is in a sub folder the path has to specify going to the parent folder first*/
+.verticaltimeline {
+    background: url("../media/backgrounds//timeline.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+/* class for making links look like rounded buttons */
+a.buttonlink {
+    /* rounded corners */
+    border-radius: 0.375rem;
+    /*slight shadow */ 
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    display: inline-block;
+    /* pad the button so it's not close to the text bottom and right same as top and left */
+    padding: 0.375rem 0.75rem;
+    /* text colour */
+    color: #ffffff;  
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px solid;
+    border-color: var(--link-button-border);
+    background-color: var(--link-button-background);
+    /* change the cursor to a pointer so it looks like a button */
+    cursor: pointer;
+    /* slight change of colour when hover into and out of button */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* class for the contact me link - similar to buttons but not removed when printing */
+a.contactlink {
+  /* rounded corners */
+  border-radius: 0.375rem;
+  /*slight shadow */ 
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+  display: inline-block;
+  /* pad the button so it's not close to the text bottom and right same as top and left */
+  padding: 0.375rem 0.75rem;
+  /* text colour */
+  color: #ffffff;  
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 1px solid;
+  border-color: var(--link-button-border);
+  background-color: var(--link-button-background);
+  /* change the cursor to a pointer so it looks like a button */
+  cursor: pointer;
+  /* slight change of colour when hover into and out of button */
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* darker background when hovering over the button */
+a:hover.buttonlink {
+  color: #ffffff;
+  border-color: var(--link-button-border);
+  background-color: var(--link-button-background);
+}
+
+/* ideas from https://dev.to/jonoyeong/how-to-make-your-cards-pop-10ok and altered to suit purpose */ 
+.card {
+  position: relative;
+  padding: 1em;
+  /* make sure the card is below the floating menu*/
+  z-index: 0;
+  background: #fff;
+  /* give the card a slight shadow by using black with a small amount of transparancy*/
+  box-shadow:
+    0 5px 10px rgba(0, 0, 0, 0.1),
+    0 20px 20px rgba(0, 0, 0, 0.05);
+  /* create a margin between the cards to allow for hover over expansion */
+  margin-bottom: 1em;
+  /* make the pop slower and smoother with a transition */
+  transition: transform 1s ease-out;
+}
+
+/* slightly transparent background used for cards in cv.html to make the timeline show through */
+.showtimeline {
+  background: rgba(255, 255, 255, 0.90);
+}
+
+.logo-small {
+  display: block;
+  max-width:2em;
+  max-height:2em;
+  width: auto;
+  height: auto;
+}
+
+.logo-medium {
+  max-width:4em;
+  max-height:4em;
+  width: auto;
+  height: auto;
+}
+
+/* ideas from https://dev.to/jonoyeong/how-to-make-your-cards-pop-10ok and altered to suit purpose */ 
+.card:hover {
+  /* enlarge the card by 0.02 so it pops out*/
+	transform: scale(1.02);
+  /* create a darker shadow */
+  box-shadow:
+    0 10px 20px rgba(25, 25, 25, 1),
+    0 20px 20px rgba(25, 25, 25, 1);
+  /* make sure the card is below the floating menu*/
+    z-index: 0;
+}
+
+/* style for my name on the left of the navigation bar */
+.navigation-me {
+  background-color: #000000;
+  color:  white;
+  font-weight: bold;
+}
+
+/* set the navbar to be fixed at the top of the page, so when the user scrolls down the navigation bar is always visible*/
+.navigationbar-top {
+  position: fixed;
+  font-size: 1em;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* this css is changed by the hamburgerMenu javascript function 
+ideas for responsive navigation from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+.navigationbar-top .hamburgerMenuIcon {
+  display: none;
+}
+
+/* Style the links inside the navigation bar */
+.navigationbar-top a {
+  text-align: center;
+  font-size: 1em;
+  padding: 0.5rem;
+  text-decoration: none;
+  float: left;
+  display: block;
+  color:  white;
+}
+
+/* Change the color of links on hover */
+.navigationbar-top a:hover {
+  background:#111;
+  color:  white;
+  text-shadow:1px 1px 10px white, 1px 1px 10px #ccc;
+  text-align:center;
+}
+
+/* the current page is highlighted on the navigation menu */
+.navigationbar-top a.active {
+  background-color: var(--secondary-bg-colour);
+  color: white;
+}
+
+/* responsive code 
+ideas for responsive navigation from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+@media screen and (max-width: 800px) {
+  .navigationbar-top a:not(:first-child) {
+    display: none;
+  }
+
+  .navigationbar-top a.hamburgerMenuIcon {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color:  white;
+  }
+}
+
+/* when screen too small to display the navigation bar on one line add the hambuger style*/
+@media screen and (max-width: 800px) {
+  .navigationbar-top.hamburger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    background-color: #000000;
+    overflow: hidden;
+  }
+  .navigationbar-top.hamburger a.hamburgerMenuIcon {
+    position: absolute;
+    padding: 0.25rem 1rem;
+    right: 0;
+    top: 0;
+  }
+  .navigationbar-top.hamburger a {
+    float: none;
+    top: 0;
+    z-index: 1;
+    padding: 0.25rem;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* if we are printing the page then remove some elements and styling */
+@media print {
+  /* remove navigation */
+  nav {
+    display: none;
+  }
+  /* remove navigation buttons on the page */
+  .buttonlink {
+    display: none;
+  } 
+
+  /* reduce the size of the images 1/3rd of the size to save ink */
+  img {
+    width: 75px;
+    height: 50px;
+  }
+
+  /* remove the styling around the cards */
+  card {
+    border: none;
+    width: 120px;
+    box-shadow: none;
+  }
+ }

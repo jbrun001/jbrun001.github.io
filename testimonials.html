@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- tell the browser the intial settings for the view port -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- for this particular project I don't want search engines to index or follow links  -->
+    <meta name="robots" content="noindex,nofollow">
+    <title>Jake Brunnen References</title>
+    <!-- icons for the browser tab -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./media/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./media/icons/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+     <!-- local scripts for local javascript used on each page-->
+    <script src="./scripts/portfolio.js"></script>
+    <!-- download the Questrial font from googleapis so we dont need to copy the font and have it locallym, this is the font used for the text 
+    ref: https://developers.google.com/fonts/docs/getting_started -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial:400,600,800" type="text/css">
+    <!-- add the font material symbols outlined - these are for the icons used on all the pages-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" type="text/css">
+    <!-- bootstrap external css used on all pages -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" type="text/css">
+    <!-- local stylesheet used for all pages in the porfolio overrrides bootstrap css -->
+    <link rel="stylesheet" href="./stylesheets/portfolio.css" type="text/css">
+  </head>
+
+  <body>
+    <nav class="navigationbar-top" id="menu">
+      <a class="navigation-me" href="./index.html">Jake Brunnen</a>
+      <a href="./index.html">Home</a>    
+      <a href="./allprojects.html">Projects</a>
+<!--  <a href="./cv.html">Work & Education</a> 
+      <a href="./testimonials.html">Testimonials</a> 
+-->
+
+      <!-- internal link to the contacts id in the footer -->
+      <a href="#contacts">Contact me</a>
+      <!-- this is the click of the hamburger menu the hamburger menu is only displayed
+      when the screen is too small to display the top menu on one line, see CSS for original code references -->
+      <a href="javascript:void(0);" class="hamburgerMenuIcon" onclick="hamburgerMenuToggle()">
+        <span class="material-symbols-outlined">menu</span>
+      </a>
+    </nav>
+  
+    <header class="bg-colour py-5">
+      <!-- blue rectangle at top of page introducing content -->
+      <div class="container text-center">
+        <h1 class="text-white"><br>Testimonials & References</h1>
+      </div>
+    </header>
+    <main class="py-5 container">
+      <div id="mainrow" class="row">
+        <!-- 3 columns wide there are four columns types and 12 columns , leave a margin at the botton because on smaller screens
+        the featured projects will immediately follow -->
+        <section id="workreferences" class="col-md-12">
+          <h3>Collegues, Clients and Managers</h3>
+          <div class="card-deck mb-5">
+            <!-- each reference is a card which contains an image, then project detail which is a title and a description of the project -->
+            <article class="card">
+              <img src="./media/people/ref-001-250x250.png" alt="AI chat bot screenshot" class="headshot testimonial">
+              <h4 class="card-title">Oskar Bosco</h4>
+              <!-- reference detail - a title and a description -->
+              <p class="card-text">"Our company's network security greatly improved under Jake's leadership. He identified and resolved vulnerabilities that had gone unnoticed for years."</p>
+            </article>
+            <article class="card">
+              <img src="./media/people/ref-002-250x250.png" alt="AI chat bot screenshot" class="headshot testimonial">
+              <!-- reference detail - a title and a description -->
+              <h4 class="card-title">Chōko Katsuko</h4>
+              <p class="card-text">"Jake is a true expert in cybersecurity. He was able to quickly and efficiently identify and neutralize a sophisticated cyber attack on our company."</p>
+            </article>
+            <article class="card">
+              <img src="./media/people/ref-003-250x250.png" alt="AI chat bot screenshot" class="headshot testimonial">
+              <!-- reference detail - a title and a description -->
+              <h4 class="card-title">Adenike Bukola</h4>
+              <p class="card-text">"Thanks to Jake, our software is now running faster and more efficiently than ever before. He is a true asset to the team."</p>
+            </article>
+            <article class="card">
+              <img src="./media/people/ref-004-250x250.png" alt="AI chat bot screenshot" class="headshot testimonial">
+              <!-- reference detail - a title and a description -->
+              <h4 class="card-title">Ernest Sokol</h4>
+              <p class="card-text">"Jake is a true AI expert. He has a deep understanding of the field and are able to turn complex concepts into working models."</p>
+            </article>
+            <article class="card">
+              <img src="./media/people/ref-005-250x250.png" alt="AI chat bot screenshot" class="headshot testimonial">
+              <!-- reference detail - a title and a description -->
+              <h4 class="card-title">Hatim John</h4>
+              <p class="card-text">"I have never worked with anyone as skilled and efficient as Jake. Hes coding abilities are top-notch and his attention to detail is unparalleled."</p>
+            </article>
+            <article class="card">
+              <img src="./media/people/ref-006-250x250.png" alt="AI chat bot screenshot" class="headshot testimonial">
+              <!-- reference detail - a title and a description -->
+              <h4 class="card-title">Hana Chandra</h4>
+              <p class="card-text">"I have never seen anyone with Jake's level of knowledge and skill when it comes to cybersecurity. He is a valuable asset to any team."</p>
+            </article>
+            <article class="card">
+              <img src="./media/people/ref-007-250x250.png" alt="AI chat bot screenshot" class="headshot testimonial">
+              <!-- reference detail - a title and a description -->
+              <h4 class="card-title">Ama Okonkwo</h4>
+              <p class="card-text">"I have never seen anyone with Jake's level of expertise in AI coding. He is able to create sophisticated algorithms that achieve impressive results."</p>
+            </article>
+            <article class="card">
+              <img src="./media/people/ref-008-250x250.png" alt="AI chat bot screenshot" class="headshot testimonial">
+              <!-- reference detail - a title and a description -->
+              <h4 class="card-title">Anna Sapienti</h4>
+              <p class="card-text">"I've had the pleasure of working with Jake on several AI projects. His coding abilities and attention to detail are unmatched."</p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <!-- contact me section - the menu link uses an internal link to this  id -->
+          <section id="contacts" class="col-md-6">
+            <h4>Contact me</h4>
+            <!-- use a mailto href so it will open up any locally installed email client
+            won't work with web email clients -->
+            <p>
+            <a href="mailto:jbrun001@gold.ac.uk" class="contactlink">
+              <!-- this shows the icon from the google material font -->
+              <span class="material-symbols-outlined">contact_mail</span>
+                  jbrun001@gold.ac.uk
+              </a>
+            </p>          
+          </section>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

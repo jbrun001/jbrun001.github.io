@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- tell the browser the intial settings for the view port -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- for this particular project I don't want search engines to index or follow links  -->
+    <meta name="robots" content="noindex,nofollow">
+    <title>Jake Brunnen Resume</title>
+    <!-- icons for the browser tab -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./media/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./media/icons/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <!-- local scripts for local javascript used on each page-->
+    <script src="./scripts/portfolio.js"></script>
+    <!-- download the Questrial font from googleapis so we dont need to copy the font and have it locallym, this is the font used for the text 
+    ref: https://developers.google.com/fonts/docs/getting_started -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial:400,600,800" type="text/css">
+    <!-- add the font material symbols outlined - these are for the icons used on all the pages-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" type="text/css">
+    <!-- bootstrap external css used on all pages -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" type="text/css">
+    <!-- local stylesheet used for all pages in the porfolio overrrides bootstrap css -->
+    <link rel="stylesheet" href="./stylesheets/portfolio.css" type="text/css">
+  </head>
+
+  <body>
+      <nav class="navigationbar-top" id="menu">
+        <a class="navigation-me" href="./index.html">Jake Brunnen</a>
+        <a href="./index.html">Home</a>    
+        <a href="./allprojects.html">Projects</a>
+        <!-- menu choices, the current page has class active so it can be identified -->
+<!--  <a href="./cv.html">Work & Education</a> 
+      <a href="./testimonials.html">Testimonials</a> 
+-->
+
+        <!-- internal link to the contacts id in the footer -->
+        <a href="#contacts">Contact me</a>
+        <!-- this is the click of the hamburger menu the hamburger menu is only displayed
+        when the screen is too small to display the top menu on one line, see CSS for original code references -->
+        <a href="javascript:void(0);" class="hamburgerMenuIcon" onclick="hamburgerMenuToggle()">
+          <span class="material-symbols-outlined">menu</span>
+        </a>
+      </nav>
+    
+    <header class="bg-colour py-5">
+      <!-- blue rectangle at top of page introducing content -->
+      <div class="container text-center">
+        <h1 class="text-white"><br>Work and Educational History</h1>
+        <p class="text-white"></p>
+      </div>
+    </header>
+
+    <main class="py-5 container">
+      <div id="mainrow" class="row">
+        <!-- 6 columns wide there are two columns, leave a margin at the botton because on smaller screens
+        the next column will immediately follow -->
+        <section id="Employment" class="col-md-6 verticaltimeline">
+          <h3>Employment</h3>
+          <!-- the job summaries -->
+          <div class="card-deck mb-4">
+            <!-- each card contains details of each job  -->
+            <article class="card showtimeline">
+              <!-- project detail - a title and a description -->
+              <h4 class="card-title"><img src="https://www.one-beyond.com/wpcms/wp-content/themes/dcsl/assets/images/logo.webp" class="logo-small" alt="One Beyond Logo">
+              2030-present.  Software Engineer, One Beyond, London, UK</h4>
+              <p class="card-text">Collaborated with an international cross-functional team to design and develop software applications using Java and Spring. 
+                Implemented features and fixes in accordance with software development best practices, including version control and testing. 
+                Contributed to project planning and estimation efforts, and participated in code reviews and team meetings.  Developed Web Task managment application.
+              </p>
+            </article>
+            <article class="card showtimeline">
+              <!-- project detail - a title and a description -->
+              <h4 class="card-title"><img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/gb1jy50ox9vp7owg8qgo" class="logo-small" alt="Darktrace Logo">
+              2027-2030.  Cybersecurity Consultant, Darktrace, Cambridge, UK</h4>
+              <p class="card-text">Assessed and evaluated the cybersecurity posture of clients in various industries
+                Conducted vulnerability assessments and penetration testing using tools such as Kali Linux and Burp Suite
+                Developed and implemented cybersecurity strategies and plans for clients
+                Provided training and awareness sessions on cybersecurity best practices</p>
+            </article>
+            <article class="card showtimeline">
+              <!-- project detail - a title and a description -->
+              <h4 class="card-title">
+              <img src="https://www.salesforce.com/news/wp-content/uploads/sites/3/2021/05/Salesforce-logo.jpg" class="logo-small" alt="Salesforce Logo">
+              2025-2027. Data Scientist, Salesforce, London, UK</h4>
+              <p class="card-text">Analyzed and interpreted large datasets using Python and machine learning algorithms.  
+                Developed predictive models and identified patterns and trends in data.  
+                Presented findings and recommendations to clients and stakeholders.  
+                Contributed to the development and maintenance of data pipelines and systems</p>
+            </article>
+            <article class="card showtimeline">
+              <h4 class="card-title"><img src="https://www.london.ac.uk/sites/default/files/University-of-london-logo_1.png" class="logo-small" alt="university of london Logo">
+              2024-2025.  University of London.  Research Assistant.</h4>
+              <p class="card-text">Assisted a professor with research on natural language processing using Python and NLTK.  Created a prototype of a chatbot using machine learning algorithms.  
+              Presented findings at a departmental seminar</p>
+            </article>
+            <article class="card showtimeline">
+              <!-- project detail - a title and a description -->
+              <h4 class="card-title"><img src="https://images.squarespace-cdn.com/content/v1/5c88c50af4e5316a44e9f34e/bd263c50-1245-4d98-ad4f-e1c5a81436f0/NewVIc+logo_inhouse-01.png?format=1500w" class="logo-small" alt="NewVic college logo">
+                2022-2023.  Volunteer Tutor.</h4>
+              <p class="card-text">Provided one-on-one and small group tutoring to college school students in computer science.  
+              Assisted students with coursework, projects, and exam preparation.  Participated in professional development workshops on teaching and learning strategies</p>
+            </article>
+          </div>
+        </section>
+        <section id="Education" class="col-md-6 verticaltimeline">
+          <h3>Education</h3>
+          <!-- the project summaries are three cards using bootstrap card-deck css but restyled -->
+          <div class="card-deck mb-4">
+            <!-- each card contains details of an education achievement -->
+            <article class="card showtimeline">
+              <h4 class="card-title">
+                <a href="https://doc.gold.ac.uk/~jbrun001/programming/week7/index.html" class="stretched-link"><img src="./media/projects/project-moondash300x200.png" class="logo-small" alt="Moon Dash! logo"></a>
+                2030. Personal Development.  Javascript</h4>
+              <p class="card-text">Produced a commercially successful 2D platformer, written in Javascript, while investing in improving my Javascript skills in my own time. Click to play!</p>
+            </article>
+            <article class="card showtimeline">
+              <h4 class="card-title"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png" class="logo-small" alt="python logo">
+                2029. Personal Development.  Python & TensorFlow</h4>
+              <p class="card-text">Created a machine learning-based recommendation system for a streaming media service, using user data to suggest content that a user is likely to enjoy.</p>
+            </article>
+            <article class="card showtimeline">
+              <h4 class="card-title"><img src="./media/logos/comptiasecurity.png" class="logo-small" alt="CompTIA+ Logo">
+                2027.  Professional Development</h4>
+              <p class="card-text">Certification.  CompTIA Security++</p>
+            </article>
+            <article class="card showtimeline">
+              <h4 class="card-title"><img src="./media/logos/comptiasecurity.png" class="logo-small" alt="CompTIA+ Security Logo">
+              2026.  Professional Development</h4>
+              <p class="card-text">Certification.  CompTIA+</p>
+            </article>
+            <article class="card showtimeline">
+              <h4 class="card-title"><img src="https://www.acm.org/binaries/content/gallery/global/top-menu/acm_logo_tablet.svg" class="logo-small" alt="goldsmiths university logo">
+                2025-present. Professional Development</h4>
+              <p class="card-text">Member, Association for Computing Machinery (ACM)</p>
+            </article>
+            <article class="card showtimeline">
+              <h4 class="card-title"><img src="https://bpando.org/wp-content/uploads/13-Goldsmiths-Logotype-Spy-BPO.jpg" class="logo-small" alt="goldsmiths university logo">2025.  First Class BSc (Hons) Computer Science. Goldsmiths University of London</h4>
+              <p class="card-text">Javascript, Java, Front End Dev, Database and server-side programming, computer security, machine learning, data mining, digital business modelling, and mobile development. Additionally computing fundamentals, algorithms, advanced numerical computation, software design AR and VR.  During my time here I also provided assistance to first year students in the labs.</p>
+            </article>
+            <article class="card showtimeline">
+              <h4 class="card-title"><img src="https://images.squarespace-cdn.com/content/v1/5c88c50af4e5316a44e9f34e/bd263c50-1245-4d98-ad4f-e1c5a81436f0/NewVIc+logo_inhouse-01.png?format=1500w" class="logo-small" alt="NewVic college logo">2022.  DDM Computer Science Level 3 BTEC. Newvic College</h4>
+              <p class="card-text">Java, Mobile application development (android studio) for educational sector and mobile gaming, Research projects and reports: Social Media Polices and Campaign implementation, Information Security. </p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <!-- contact me section - the menu link uses an internal link to this  id -->
+          <section id="contacts" class="col-md-6">
+            <h4>Contact me</h4>
+            <!-- use a mailto href so it will open up any locally installed email client
+            won't work with web email clients -->
+            <p>
+            <a href="mailto:jbrun001@gold.ac.uk" class="contactlink">
+              <!-- this shows the icon from the google material font -->
+              <span class="material-symbols-outlined">contact_mail</span>
+                  jbrun001@gold.ac.uk
+              </a>
+            </p>          
+          </section>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

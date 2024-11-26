@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- tell the browser the intial settings for the view port -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- for this particular project I don't want search engines to index or follow links  
+    but in a real scenario this is something I would want -->
+    <meta name="robots" content="noindex,nofollow">
+    <title>Jake Brunnen Portfolio</title>
+    <!-- icons for the browser tab -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./media/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./media/icons/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <!-- local scripts for local javascript used on each page-->
+    <script src="./scripts/portfolio.js"></script>
+    <!-- download the Questrial font from googleapis so we dont need to copy the font and have it locallym, this is the font used for the text 
+    ref: https://developers.google.com/fonts/docs/getting_started -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial:400,600,800" type="text/css">
+    <!-- add the font material symbols outlined - these are for the icons used on all the pages-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" type="text/css">
+    <!-- bootstrap external css used on all pages -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" type="text/css"> 
+    <!-- local stylesheet used for all pages in the porfolio overrrides bootstrap css -->
+    <link rel="stylesheet" href="./stylesheets/portfolio.css" type="text/css">
+  </head>
+
+  <body>
+    <nav class="navigationbar-top" id="menu">
+      <a class="navigation-me" href="./index.html">Jake Brunnen</a>
+      <!-- menu choices, the current page has class active so it can be identified -->
+      <a class="active" href="./index.html">Home</a>    
+      <a href="./allprojects.html">Projects</a>
+<!--  <a href="./cv.html">Work & Education</a> 
+      <a href="./testimonials.html">Testimonials</a> 
+-->
+      <!-- internal link to the contacts id in the footer -->
+      <a href="#contacts">Contact me</a>
+      <!-- this is the click of the hamburger menu the hamburger menu is only displayed
+      when the screen is too small to display the top menu on one line, see CSS for original code references -->
+      <a href="javascript:void(0);" class="hamburgerMenuIcon" onclick="hamburgerMenuToggle()">
+        <span class="material-symbols-outlined">menu</span>
+      </a>
+    </nav>
+  
+    <header class="bg-colour py-5">
+      <!-- blue rectangle at top of page introducing content -->
+      <div class="container text-center">
+        <h1 class="text-white"><br>Welcome to My Portfolio</h1>
+        <p class="text-white"></p>
+      </div>
+    </header>
+
+    <main class="py-5 container">
+      <div id="mainrow" class="row">
+        <!-- about me section 6/12 columns wide on the left at full screen, leave a margin at the botton because on smaller screens
+        the featured projects will immediately follow -->
+        <section id="aboutme" class="col-md-6 mb-5">
+          <h3>About me</h3>
+          <article>
+            <img src="./media/people/photo200x200.png" alt="picture of jake b" class="img-fluid mb-2 headshot"> 
+            <img src="./media/icons/icon-location35x35.png" alt="location icon" class="img-fluid mb-2">London, UK
+            <h4>Jake Brunnen</h4>
+            <p>Security focused front end developer, based in the UK</p>  
+            <p>Seeking opportunities to apply my skills, add value and continue 
+              learning in a challenging and dynamic environment.</p>
+            <!-- link that is formatted like a button to go to the cv page -->
+<!--<p>     <a href="./cv.html" class="buttonlink">View my work and educational history</a></p>  
+-->
+            <!-- logos for coding languages and certifications that I have -->
+            <p>
+              <img src="https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.jpg" class="logo-medium" alt="java logo">
+              <img src="https://wsrv.nl/?url=https%3A%2F%2Fcodedamn-blog.s3.amazonaws.com%2Fwp-content%2Fuploads%2F2022%2F03%2F07094700%2Fjs1.png&w=200&q=75&output=webp" class="logo-medium" alt="javascript logo">
+              <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png" class="logo-medium" alt="python logo">
+              <img title="Rudloff, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" alt="CSS3 logo and wordmark" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/128px-CSS3_logo_and_wordmark.svg.png" class="logo-medium">
+              <img src="https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2022/10/android-studio-logo-1.jpg?w=2000&quality=82&strip=all&ssl=1" class="logo-medium" alt="Android studio logo">
+<!--          <img src="./media/logos/comptiasecurity.png" class="logo-medium" alt="Comptia security+ logo">
+            
+-->
+</p>          
+          </article>
+        </section>
+        <!-- featured projects section 6/12 columns wide on the right at full screen -->
+        <section id="featuredprojects" class="col-md-6">
+          <h3>Project Highlights</h3>
+          <!-- the project summaries are three cards using bootstrap card-deck css but restyled -->
+          <div class="card-deck mb-4">
+            <!-- each project is a card which contains an image, then project detail which is a title and a description of the project -->
+            <article class="card">
+<!--        <img src="./media/projects/project-chatbot300x200.png" alt="AI chat bot screenshot" class="card-img-top">
+-->
+            <img src="https://placehold.co/300x200">
+<!-- project detail - a title and a description -->
+              <h4 class="card-title">Room Booking</h4>
+              <p class="card-text">Effective internal meeting room booking, with flexible dynamic room filtering</p>
+            </article>
+            <article class="card">
+<!--
+              <img src="./media/projects/project-mlobjectid300x200.png" alt="Machine Learning object classification image" class="card-img-top">
+-->
+              <img src="https://placehold.co/300x200">
+              <!-- project detail - a title and a description -->
+              <h4 class="card-title">World Cup Simulator</h4>
+              <p class="card-text">Simulates 2022 world cup based on team, player and manager data</p>
+            </article>
+            <article class="card">
+<!--          <img src="./media/projects/project-taskmanagementapplication300x200.png" alt="Task Management Application image" class="card-img-top">
+-->
+              <img src="https://placehold.co/300x200">
+              <!-- project detail - a title and a description -->
+              <h4 class="card-title">Restaurant Managment App</h4>
+              <p class="card-text">Android app for managing restaurant orders, with online ordering and kitchen order managment</p>
+            </article>
+          </div>
+          <!-- a links styled as a button to go to the projects page -->
+          <a href="./allprojects.html" class="buttonlink">View all my projects</a>
+        </section>
+      </div>
+    </main>
+    <footer class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <!-- contact me section - the menu link uses an internal link to this  id -->
+          <section id="contacts" class="col-md-6">
+            <h4>Contact me</h4>
+            <!-- use a mailto href so it will open up any locally installed email client
+            won't work with web email clients -->
+            <p>
+            <a href="mailto:jbrun001@gold.ac.uk" class="contactlink">
+              <!-- this shows the icon from the google material font -->
+              <span class="material-symbols-outlined">contact_mail</span>
+                  jbrun001@gold.ac.uk
+              </a>
+            </p>          
+          </section>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
