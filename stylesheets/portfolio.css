@@ -132,7 +132,7 @@ a:hover.buttonlink {
   padding: 1em;
   /* make sure the card is below the floating menu*/
   z-index: 0;
-  background: #fff;
+  background: #fdfdfd;
   /* give the card a slight shadow by using black with a small amount of transparancy*/
   box-shadow:
     0 5px 10px rgba(0, 0, 0, 0.1),
@@ -142,6 +142,24 @@ a:hover.buttonlink {
   /* make the pop slower and smoother with a transition */
   transition: transform 1s ease-out;
 }
+
+/* make the project title bold */
+.card-title {
+  font-weight: bold;
+}
+
+
+/* make a link class so we can link to github - remove link styling*/
+.card-link {
+  text-decoration: none; 
+  color: inherit;        
+  display: block;        
+}
+
+.card-link:hover {
+  color: inherit; 
+}
+
 
 /* slightly transparent background used for cards in cv.html to make the timeline show through */
 .showtimeline {
